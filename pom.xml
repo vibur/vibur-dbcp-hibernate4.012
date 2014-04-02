@@ -19,12 +19,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.vibur</groupId>
-    <artifactId>vibur-dbcp-hibernate4</artifactId>
+    <artifactId>vibur-dbcp-hibernate4-012</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Vibur DBCP - Hibernate4 Integration</name>
-    <description>Hibernate4 integration for Vibur DBCP.</description>
+    <name>Vibur DBCP - Hibernate 4.0, 4.1, 4.2 Integration</name>
+    <description>Hibernate 4.0, 4.1, 4.2 integration for Vibur DBCP.</description>
     <url>https://code.google.com/p/vibur-dbcp-hibernate4</url>
     <inceptionYear>2013</inceptionYear>
 
@@ -43,9 +43,9 @@
     <!--</parent>-->
 
     <scm>
-        <connection>scm:git:https://code.google.com/p/vibur-dbcp-hibernate4/</connection>
-        <developerConnection>scm:git:https://code.google.com/p/vibur-dbcp-hibernate4/</developerConnection>
-        <url>http://code.google.com/p/vibur-dbcp-hibernate4/source/browse</url>
+        <connection>scm:git:https://code.google.com/p/vibur-dbcp-hibernate4.012/</connection>
+        <developerConnection>scm:git:https://code.google.com/p/vibur-dbcp-hibernate4.012/</developerConnection>
+        <url>http://code.google.com/p/vibur-dbcp-hibernate4/source/browse?repo=012</url>
     </scm>
 
     <developers>
@@ -78,7 +78,8 @@
 
         <java.version>1.6</java.version>
         <vibur.version>1.0.0</vibur.version>
-        <hibernate-core.version>4.2.8.Final</hibernate-core.version>
+        <slf4j.version>1.7.2</slf4j.version>
+        <hibernate-core.version>4.2.11.Final</hibernate-core.version>
 
         <junit.version>4.11</junit.version>
         <mockito-all.version>1.9.5</mockito-all.version>
@@ -107,7 +108,14 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Hibernate4 dependency, optional. -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Hibernate 4.2 dependency, optional. -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
